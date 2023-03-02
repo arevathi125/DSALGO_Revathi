@@ -14321,3 +14321,13 @@
 [INFO ] 2023-03-02 10:16:36.604 [main] Loggerload - ===============================================================================================
 [INFO ] 2023-03-02 10:16:36.604 [main] Loggerload - [@graph] : User Navigate to Graph Page and works on Graph Representations
 [INFO ] 2023-03-02 10:16:36.604 [main] Loggerload - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-03-02 10:46:48.040 [main] Loggerload - Loading Config file
+[INFO ] 2023-03-02 10:46:48.047 [main] Loggerload - Get property BrowserType
+[INFO ] 2023-03-02 10:46:48.048 [main] Loggerload - Testing on chrome
+[INFO ] 2023-03-02 10:46:49.828 [main] Loggerload - Initializing driver for : chrome
+[INFO ] 2023-03-02 10:46:50.258 [main] Loggerload - ===============================================================================================
+[INFO ] 2023-03-02 10:46:50.258 [main] Loggerload - [@graph, @graph] : User Navigate to Graph Page and works on Graph
+[INFO ] 2023-03-02 10:46:50.258 [main] Loggerload - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-03-02 10:46:54.316 [main] Loggerload - ===============================================================================================
+[INFO ] 2023-03-02 10:46:54.316 [main] Loggerload - [@graph] : User Navigate to Graph Page and works on Graph Representations
+[INFO ] 2023-03-02 10:46:54.316 [main] Loggerload - -----------------------------------------------------------------------------------------------
