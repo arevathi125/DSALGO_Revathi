@@ -1,8 +1,15 @@
 package hooks;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.IOException;
+import java.util.List;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import crossBrowser.DriverFactory;
@@ -17,6 +24,7 @@ import utilities.Loggerload;
 
 public class Hooks {
 
+	private static final String IMAGE_PATH = null;
 	private static WebDriver driver;
 	private static DriverFactory driverfactory;
 	//private static Logger logger = (Logger) LogManager.getLogger();
@@ -57,6 +65,25 @@ public class Hooks {
 			new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));     //***************************		
 		}
 	}
+	
+//	@AfterStep
+//	public void afterstep(Scenario scenario) {
+//		List<String> list = (List<String>) scenario.getSourceTagNames();
+//		//list.
+//		Loggerload.info("Scenario Name"+list.get(1));
+//		if(list.get(1).equals("@TS_register_02")) {
+//		//if (scenario.isFailed()) {
+//			Loggerload.error("Steps Failed");
+//			Loggerload.error("Steps Failed , Taking Screenshot");                  //***************************
+//			final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);    //***************************
+//			scenario.attach(screenshot, "image/png", "My screenshot");     //***************************
+//			Allure.addAttachment("Myscreenshot",      //***************************
+//			new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+//		}//***************************		
+//		//}
+			//scenario.
+	//}
+	
 
 	@AfterAll
 	public static void after() {

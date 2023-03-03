@@ -21,10 +21,11 @@ public class RegisterPage_Step {
 	}
 
 	@When("User clicks {string} button with all fields empty")
-	public void user_clicks_button_with_all_fields_empty(String string) throws IOException {
-	    register.clickRegisterLink();
-	    register.clickSubmitRegister();
-	    register.screenShot();
+	public void user_clicks_button_with_all_fields_empty(String string) throws Exception {
+	   
+		   register.clickRegisterLink();
+		    register.clickSubmitRegister();
+		    register.screenShot("Sample1.png");
 	}
 
 	@Then("It should display an error message {string} below username textbox")
@@ -34,12 +35,12 @@ public class RegisterPage_Step {
 	}
 
 	@When("User enters {string} with other fields empty and clicks register button")
-	public void user_enters_with_other_fields_empty_and_clicks_register_button(String string, io.cucumber.datatable.DataTable dataTable) throws IOException {
+	public void user_enters_with_other_fields_empty_and_clicks_register_button(String string, io.cucumber.datatable.DataTable dataTable) throws Exception {
 	    register.clickRegisterLink();
 	    Loggerload.info("User enters with username and other fields empty");
 	    register.enetrUserName(dataTable);
 	    register.clickSubmitRegister();
-	    //register.screenShot();
+	    register.screenShot("Sample2.png");
 	}
 
 	@Then("It should display an error message {string} below password textbox")
@@ -49,13 +50,13 @@ public class RegisterPage_Step {
 	}
 
 	@When("User enters {string} and {string} with other fields empty and clicks register button")
-	public void user_enters_and_with_other_fields_empty_and_clicks_register_button(String string, String string2, io.cucumber.datatable.DataTable dataTable) throws IOException {
+	public void user_enters_and_with_other_fields_empty_and_clicks_register_button(String string, String string2, io.cucumber.datatable.DataTable dataTable) throws Exception {
 	    register.clickRegisterLink();
 	    Loggerload.info("User enters username and password with other fields empty");
 	    register.enetrUserName(dataTable);
 	    register.enterPassword(dataTable);
 	    register.clickSubmitRegister();
-	    //register.screenShot();
+	    register.screenShot("Sample3.png");
 	}
 
 	@Then("It should display an error message {string} below confirm_password textbox")
@@ -86,17 +87,20 @@ public class RegisterPage_Step {
 		    register.enetrUserName(dataTable);
 		    register.enterPassword(dataTable);
 		    register.enterConfirmPassword(dataTable);
+		    
 		    register.clickSubmitRegister();
+		    
 	}
 
 	@When("User enters {string} and with less than {int} characters {string} and {string}  and clicks register button")
-	public void user_enters_and_with_less_than_characters_and_and_clicks_register_button(String string, Integer int1, String string2, String string3, io.cucumber.datatable.DataTable dataTable) {
+	public void user_enters_and_with_less_than_characters_and_and_clicks_register_button(String string, Integer int1, String string2, String string3, io.cucumber.datatable.DataTable dataTable) throws Exception {
 		register.clickRegisterLink();
 	    Loggerload.info("User enters \"username\" and \"password\" ,\"confirm_password with less than 8 characters");
 	    register.enetrUserName(dataTable);
 	    register.enterPassword(dataTable);
 	    register.enterConfirmPassword(dataTable);
 	    register.clickSubmitRegister();
+	    register.screenShot("Sample4.png");
 	}
 
 	@Given("User Opens register page")
@@ -115,24 +119,6 @@ public class RegisterPage_Step {
 	    register.clickSubmitRegister();
 	}
 
-
-//	@When("User clicks {string} button with all fields empty")
-//	public void user_clicks_button_with_all_fields_empty(String string) {
-//	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
-//	}
-//	@Then("It should display an error message {string} below username textbox")
-//	public void it_should_display_an_error_message_below_username_textbox(String string) {
-//	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
-//	}
-//	
-//	@When("User clicks register button after entering {string} ,{string} and {string}")
-//	public void user_clicks_register_button_after_entering_and(String username, String password, String confirm_password)throws InterruptedException {
-//	    register.register_link(username, password, confirm_password);
-//	    Loggerload.info("user   successfully   Registered");
-//	}
-  
 	@When("User clicks register button after entering {string} , {string} and {string}")
 	public void user_clicks_register_button_after_entering_and(String username, String password, String confirm_password) {
 	   register.register_link(username, password, confirm_password);
@@ -148,21 +134,13 @@ public class RegisterPage_Step {
 	}
    
 	@When("User enters valid existing {string} with {string} and {string}")
-	public void user_enters_valid_existing_with_and(String username, String password, String confirm_password, io.cucumber.datatable.DataTable dataTable) {
+	public void user_enters_valid_existing_with_and(String username, String password, String confirm_password, io.cucumber.datatable.DataTable dataTable) throws Exception {
 		register.clickRegisterLink();
 	    Loggerload.info("User enters valid existing username,password and confirm_password");
 	    register.enetrUserName(dataTable);
 	    register.enterPassword(dataTable);
 	    register.enterConfirmPassword(dataTable);
 	    register.clickSubmitRegister();
+	    register.screenShot("Sample5.png");
 	}
-//	@When("User enters valid existing {string},{string} and {string}")
-//	public void user_enters_valid_existing_and(String string, String string2, String string3, io.cucumber.datatable.DataTable dataTable) {
-//	    register.clickRegisterLink();
-//	    Loggerload.info("User enters valid existing username,password and confirm_password");
-//	    register.enetrUserName(dataTable);
-//	    register.enterPassword(dataTable);
-//	    register.enterConfirmPassword(dataTable);
-//	    register.clickSubmitRegister();
-//	}
 }
