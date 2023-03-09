@@ -36,8 +36,10 @@ public class DriverFactory {
 	      chromeOptions.setScriptTimeout(Duration.ofSeconds(30));
 	      chromeOptions.setPageLoadTimeout(Duration.ofMillis(30000));
 	      chromeOptions.setImplicitWaitTimeout(Duration.ofSeconds(20));
+	      chromeOptions.addArguments("--remote-allow-origins=*"); 
 	      driver =new ChromeDriver(chromeOptions);
 	    }
+	
 		else if(browser.equalsIgnoreCase("firefox")){
 			Loggerload.info("Testing on firefox");
 			WebDriverManager.firefoxdriver().setup();

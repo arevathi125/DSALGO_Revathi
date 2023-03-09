@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;     //TESTNG
 import io.cucumber.testng.AbstractTestNGCucumberTests;    
 
 
-/*DONE DATA DRIVEN USING EXAMPLES SCENARIO OUTLINE,  EXCEL FILE, DATATABLE ,CONFIG PROPERTIES
+/*DONE DATA DRIVEN USING EXAMPLES SCENARIO OUTLINE, EXCEL FILE, DATATABLE ,CONFIG PROPERTIES
  *DONE READING DATA FROM EXCEL FILE USING SHEET NUMBER ,SHEET NAME   
  *DONE READING USERNAME AND PASSWORD FROM CONFIG.PROPERTIES FILE
  *DONE READING USERNAME AND PASSWORD WITH HARDCODED VALUES IN FEATURE FILE 
@@ -19,8 +19,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
  *CREATED LOGS USING LOG4J
  *DONE EXCEPTION HANDLING 
  *USED CONFIG.PROPERTIES FILE,CONFIG READER, EXCEL READER, CONSTANTS, LOG4J, HOOKS,CROSS BROWSER
- *GENERATED EXTENT PDF REPORT , EXTENT SPARK HTML REPORT AND CUCUMBER HTML REPORT   
- *RAN THE CODE IN JUNIT AND TESTNG	      */
+ *GENERATED EXTENT PDF REPORT , EXTENT SPARK HTML REPORT , CUCUMBER HTML REPORT AND ALLURE REPORT  
+ *RAN THE CODE IN JUNIT AND TESTNG	
+ *DONE REPORT GENERATION IN JENKINS      */
     
     //@RunWith(Cucumber.class)             // JUNIT & TestNG
 	@CucumberOptions(
@@ -45,7 +46,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 			monochrome = true			 
 	)
     
-	//allure serve "C:\Users\areva\My Workspace\My_Project\allure-results"
+	//allure serve "C:\Users\areva\My Workspace\DSALGO_REV_Project\allure-results"
 	public class testRunner extends AbstractTestNGCucumberTests{
 
 		}
